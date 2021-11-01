@@ -176,11 +176,11 @@ if USE_S3:
     # PRIVATE_MEDIA_LOCATION = 'private'
     # PRIVATE_FILE_STORAGE = 'our_trove.storage_backends.PrivateMediaStorage'
 
-else:
-    STATIC_URL = '/staticfiles/'
-    STATIC_ROOT = BASE_DIR / 'staticfiles'
-    # MEDIA_URL = '/mediafiles/'
-    # MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+# else:
+#     STATIC_URL = '/staticfiles/'
+#     STATIC_ROOT = BASE_DIR / 'staticfiles'
+#     # MEDIA_URL = '/mediafiles/'
+#     # MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 
 # add static files to the bucket when `collectstatic` is run
