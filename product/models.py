@@ -4,8 +4,6 @@ from PIL import Image
 from django.core.files import File
 from django.db import models
 
-domain = 'menjls-backend.herokuapp.com'
-
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -46,18 +44,18 @@ class Product(models.Model):
 
     def get_image(self):
         if self.image:
-            return f'https://{domain}/{self.image.url}'
+            return self.image.url
         return ''
 
     def get_thumbnail(self):
         if self.thumbnail:
-            return f'https://{domain}/{self.thumbnail.url}'
+            return self.thumbnail.url
         else:
             if self.image:
                 self.thumbnail = self.make_thumbnail(self.image)
                 self.save()
 
-                return f'https://{domain}/{self.thumbnail.url}'
+                return self.thumbnail.url
             else:
                 return ''
 
