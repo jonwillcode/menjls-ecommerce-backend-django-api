@@ -178,4 +178,4 @@ MEDIA_ROOT = BASE_DIR / 'media/'
 
 
 # for heroku
-django_heroku.settings(locals())
+django_heroku.settings(locals(), staticfiles=False)
