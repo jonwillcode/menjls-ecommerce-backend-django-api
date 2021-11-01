@@ -169,7 +169,7 @@ if USE_S3:
     # s3 static settings
     AWS_LOCATION = 'static'
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/'
-    STATICFILES_STORAGE = 'backend.storage_backends.StaticStorage'
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 
     # # s3 private media settings
     # PRIVATE_MEDIA_LOCATION = 'private'
