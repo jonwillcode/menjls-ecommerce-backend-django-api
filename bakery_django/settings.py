@@ -150,7 +150,7 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 USE_S3 = os.environ.get('USE_S3') == 'TRUE'
 
@@ -171,22 +171,19 @@ if USE_S3:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/'
     STATICFILES_STORAGE = 'bakery_django.storage_backends.StaticStorage'
 
-    # # s3 private media settings
+    # s3 private media settings
     # PRIVATE_MEDIA_LOCATION = 'private'
-    # PRIVATE_FILE_STORAGE = 'bakery_django.storage_backends.PrivateMediaStorage'
+    # PRIVATE_FILE_STORAGE = 'our_trove.storage_backends.PrivateMediaStorage'
 
 else:
     STATIC_URL = '/staticfiles/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    MEDIA_URL = '/media/'
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    # MEDIA_URL = '/mediafiles/'
+    # MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 
 # add static files to the bucket when `collectstatic` is run
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media/'
 
 # end s3 storage config
 
