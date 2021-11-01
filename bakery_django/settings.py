@@ -178,7 +178,7 @@ if USE_S3:
 
 else:
     STATIC_URL = '/staticfiles/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
     # MEDIA_URL = '/mediafiles/'
     # MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
