@@ -152,9 +152,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-USE_S3 = os.environ.get('USE_S3') == 'TRUE'
+USE_S3 = os.environ.get('USE_S3')
 
 if USE_S3:
+    print('using s3 jlw')
     # aws
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
