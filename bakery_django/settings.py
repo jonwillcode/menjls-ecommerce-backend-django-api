@@ -184,7 +184,7 @@ if USE_S3:
 
 
 # add static files to the bucket when `collectstatic` is run
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfilesjlw'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'bakery_django/staticfilesjlw'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
