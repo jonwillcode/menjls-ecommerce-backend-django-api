@@ -25,7 +25,8 @@ STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*.jwcodeprojects.com', '127.0.0.1', 'localhost', ]
+ALLOWED_HOSTS = ['*.jwcodeprojects.com',
+                 '127.0.0.1', 'localhost', '*.herokuapp.com']
 
 
 # Application definition
