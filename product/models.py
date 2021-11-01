@@ -1,12 +1,10 @@
 from io import BytesIO
 from PIL import Image
 
-from django.contrib.sites.models import Site
 from django.core.files import File
 from django.db import models
 
-
-domain = Site.objects.get_current().domain
+domain = 'menjls-backend.herokuapp.com'
 
 
 class Category(models.Model):
