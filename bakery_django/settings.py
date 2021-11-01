@@ -150,7 +150,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
 
 # s3 storage config
-USE_S3 = os.environ('USE_S3') == 'TRUE'
+USE_S3 = os.environ.get('USE_S3')
 
 if USE_S3:
     # aws settings
