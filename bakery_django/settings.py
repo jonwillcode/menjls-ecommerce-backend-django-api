@@ -181,8 +181,6 @@ else:
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
 
 # add static files to the bucket when `collectstatic` is run
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
